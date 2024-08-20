@@ -53,9 +53,151 @@ footer {
 
 #title{
     font-size: 60px;
+    padding-top: 120px;
+    color: whitesmoke;
+    padding-left:25px;
 }
-#img1{
+ /* #img1{
     float: right;
+    border-radius: 10px;
+    padding-top: 35px;
+    padding-right:25px;
     width:40%;
-    border-radius: 20px 20px;
+}  */
+
+.div1 > img{
+    float: right;
+    padding-top: 35px;
+    padding-right: 25px;
+    border-radius:10px;
+    width: 40%;
+    z-index: 0;
+ 
 }
+
+.div1{
+    background-color: gray;
+    height:400px;
+    z-index: 0; 
+    position: relative;
+    border-radius: 10px;
+}
+
+#scroll-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Make sure the container spans the full width of the page */
+}
+
+#scroll-text {
+    /* Animation properties */
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block;
+    position: relative;
+    
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: scroll-animation 25s linear infinite;
+    -webkit-animation: scroll-animation 25s linear infinite;
+    animation: scroll-animation 25s linear infinite;
+}
+
+/* Animation for Firefox */
+@-moz-keyframes scroll-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+}
+
+/* Animation for Chrome */
+@-webkit-keyframes scroll-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes scroll-animation {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+
+.core-values-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+p {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+    font-weight: 500;   
+}
+.values-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+.value-card {
+    position: relative;
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.value-card:hover {
+    transform: scale(1.05);
+}
+
+
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.value-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.value-card h3 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+.value-card p {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.keyvalues img{
+    width: 70%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1px;
+}
+
