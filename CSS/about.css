@@ -67,12 +67,14 @@ footer {
 
 .div1 > img{
     float: right;
-    padding-top: 35px;
     padding-right: 25px;
     border-radius:10px;
-    width: 40%;
+    width: 30%;
     z-index: 0;
- 
+    mix-blend-mode:darken;
+    filter: contrast(200%);
+    filter: contrast(1.8);
+    
 }
 
 .div1{
@@ -81,6 +83,7 @@ footer {
     z-index: 0; 
     position: relative;
     border-radius: 10px;
+    
 }
 
 #scroll-container {
@@ -197,7 +200,7 @@ p {
 .highlights {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around;   
     gap: 1px;
 }
 
